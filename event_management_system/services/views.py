@@ -21,7 +21,7 @@ def detail_intake(request):
 
     context = {'form':form}
     
-    return render(request, 'services/serviceDetails.html', context)
+    return render(request, 'services/serviceDetailsForm.html', context)
 
 
 

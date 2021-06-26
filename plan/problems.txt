@@ -1,0 +1,2 @@
+
+1. manager view events, status not changing onclicking update 

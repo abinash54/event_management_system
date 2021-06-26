@@ -6,11 +6,19 @@ major
 2. way for manager to view company services
     -handle status updation and deletion
 
-3. company landing page
+]= manager view events, approve or disapprove, or delete [done]
 
+]= venue CRUD management [done]
 
+]= company personal detail view
 
+]= add all service type CRUD 
 
+]= auto update venue availabilty status
+
+]= interlink html files
+
+]= add navigation panel everywhere
 
 ======================================
 minor
@@ -18,3 +26,5 @@ minor
 1. serviceDetail page, fix static
 
 2. approved green, not approved red
+
+3. calculate and add total cost in client event reg

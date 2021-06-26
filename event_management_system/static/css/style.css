@@ -1,0 +1,35 @@
+.bx{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.background{
+    background-color: rgba(240, 226, 210, .3);
+}
+.navbar{
+    background-color: rgba(0, 0, 0, .5) !important;
+}
+.navbar-brand{
+    color: orange !important;
+    
+}
+.bookBtn{
+    background: orange !important;
+        color: black !important;
+}
+.opa{
+    background-color: rgba(3, 132, 238, 0.8);
+    opacity: .9;
+}
+.backgr{
+    background-color: rgba(240, 226, 210, .3);
+}
+
+.slide{
+    height: 50vh;
+}
+
+.footercs{
+    width: 100vw;
+    margin-top: auto;
+}
