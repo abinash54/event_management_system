@@ -24,4 +24,87 @@ def detail_intake(request):
     return render(request, 'services/serviceDetailsForm.html', context)
 
 
+#service details entry
+
+
+def catEntry(request):
+    form = CateringForm()
+
+    if request.method=='POST':
+        form = CateringForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            #send an alert
+            return redirect('catering_details_entry')
+
+        else:
+            #send wrong alert
+            return redirect('catering_details_entry')
+    
+    context={'form':form}
+
+    return render(request, 'services/cateringDetailEntry.html', context)
+
+
+def photoVideoEntry(request):
+    form = PhotoVideoEntryForm()
+
+    if request.method=='POST':
+        form = PhotoVideoEntryForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            #send an alert
+            return redirect('photonvideo_details_entry')
+
+        else:
+            #send wrong alert
+            return redirect('photonvideo_details_entry')
+    
+    context={'form':form}
+
+    return render(request, 'services/photoAndVideoDetailEntry.html', context)
+
+
+
+def vipTransportServiceEntry(request):
+    form = VIPTransportServiceForm()
+
+    if request.method=='POST':
+        form = VIPTransportServiceForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            #send an alert
+            return redirect('vipTransport_details_entry')
+
+        else:
+            #send wrong alert
+            return redirect('vipTransport_details_entry')
+    
+    context={'form':form}
+
+    return render(request, 'services/vipTransportDetailEntry.html', context)
+
+  
+def decorationServEntry(request):
+    form = DecorationServiceForm()
+
+    if request.method=='POST':
+        form = DecorationServiceForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            #send an alert
+            return redirect('decoration_service_detail_entry')
+
+        else:
+            #send wrong alert
+            return redirect('decoration_service_detail_entry')
+    
+    context={'form':form}
+
+    return render(request, 'services/decorationServiceDetailEntry.html', context)
+
 

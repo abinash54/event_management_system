@@ -28,3 +28,6 @@ minor
 2. approved green, not approved red
 
 3. calculate and add total cost in client event reg
+
+4. after reg of companies, it will go only for respective service detail entry (Photo_n_Videography
+cannot fill up catering form)
