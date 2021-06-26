@@ -1,0 +1,4 @@
+
+1. way for manager to view the companies requesting to get added, click approval and update.
+
+2. 
