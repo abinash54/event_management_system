@@ -12,7 +12,9 @@ major
 
 ]= company personal detail view
 
-]= add all service type CRUD 
+]= company service detail view
+
+]= add all service type entry [done]
 
 ]= auto update venue availabilty status
 
