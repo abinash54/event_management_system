@@ -1,5 +1,5 @@
 from django.db import models
-
+from datetime import date, timedelta, datetime
 
 # Create your models here.
 class Service_Company(models.Model):
@@ -16,11 +16,18 @@ class Service_Company(models.Model):
     service_type = models.CharField(max_length=50, choices=S_TYPES)
     address = models.CharField(max_length=100, null=True, blank=True)
     license_id = models.CharField(max_length=20)
-    isApproved = models.BooleanField() #add default
+    isApproved = models.BooleanField(default=False) #add default
+
+
+    class Meta:
+        unique_together=['name', 'service_type']
 
 
     def __str__(self):
         return self.name
+
+    def getStatus(self):
+        return self.isApproved
 		
 
 
@@ -69,7 +76,7 @@ class Event(models.Model):
     )
 
     event_type = models.CharField(max_length=50,choices=EVENT_TYPES)
-    date = models.DateTimeField(auto_now_add=True)
+    date = models.DateField(default = date.today)
     customer = models.ForeignKey(Customer_Detail, on_delete=models.DO_NOTHING)
     phone = models.CharField(max_length=12)
     totalServices = models.IntegerField(default=0)

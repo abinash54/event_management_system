@@ -20,6 +20,9 @@ class Catering(models.Model):
     license_number = models.CharField(max_length=50, null=True, blank=True)
     isApproved = models.BooleanField(default=False)
 
+    class Meta:
+        unique_together=['company', 'license_number']
+
     def __str__(self):
         return self.company.name
 

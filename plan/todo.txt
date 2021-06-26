@@ -1,4 +1,20 @@
 
-1. way for manager to view the companies requesting to get added, click approval and update.
+major
+-----------------------
+]= for manager to view the company requests to join and set permission
 
-2. 
+2. way for manager to view company services
+    -handle status updation and deletion
+
+3. company landing page
+
+
+
+
+
+======================================
+minor
+-------------------------
+1. serviceDetail page, fix static
+
+2. approved green, not approved red
