@@ -75,6 +75,21 @@
                 <img src="{% static './img/img/addVenue/fi.jpg' %}" class="d-block w-100" alt="venue" height="500">
             </div>
             <div class="col-lg-6">
+                <div class="card" style="width: 15rem; border-color: white;">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <a href="{% url 'management_dashboard' %}" class="btn btn-outline-info mt-3 mb-3">Dashboard</a>
+    
+                        </div>
+                        <div class="col-sm-6">
+                            <a href="{% url 'view_venue_list' %}" class="btn btn-success mt-3">All Venues</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+
+
                 <h1 class="display-5 fw-bold lh-1 mb-3">Add A venue</h1>
                 <p class="lead">Under Venue Seasonality, consider letting planners know your property's high, low, and
                     shoulder seasons. Click Add Dates and select the dates and season using the dropdowns. Prefer that

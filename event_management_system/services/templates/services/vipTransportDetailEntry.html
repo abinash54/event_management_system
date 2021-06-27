@@ -66,152 +66,182 @@
     </div>
 
     <!-- DISPLAY DETAILS-->
-<div class="container my-5">
-        <p class="text-center fw-bolder fs-1">Vip Traval Details</p>
-        <hr>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="text-center fw-bolder fs-1">Decoration Details</p>
+                <hr>
 
-       
-            <form method="POST" class="my-5">
-            
-                {% csrf_token %}
-                <div class="row">
-                    {% for field in form  %}
-                    <div class="col-sm-2">
-                        <b>{{ field.label_tag }}</b>
-                        <div style="height: 30px;"></div>
+                <form method="POST" class="my-5">
+                    
+                    {% csrf_token %}
+                    <div class="row">
+                        {% for field in form  %}
+                        <div class="col-sm-2">
+                            <b>{{ field.label_tag }}</b>
+                            <div style="height: 30px;"></div>
+                        </div>
+                        <div class="col-sm-10">
+                            {{ field }}
+                            <div style="height: 30px;"></div>
+                        </div>
+
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary" name="supply_data">Save</button>
                     </div>
-                    <div class="col-sm-10">
-                        {{ field }}
-                        <div style="height: 30px;"></div>
+                    
+                    
+                </form>
+                
+
+                <hr>
+            </div>
+            <div class="col-sm-6">
+                <div class="card text-white bg-dark mb-3" style="max-width: 600px;">
+                    <div class="card-header">Navigation Panel (for demo only)</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="{% url 'service_details_form' %}" class="btn btn-warning mt-3">Company Personal Detail Entry</a>
+                                <a href="{% url 'catering_details_entry' %}" class="btn btn-warning mt-3">Catering Detail Entry</a>
+                                <a href="{% url 'vipTransport_details_entry' %}" class="btn btn-warning mt-3">Vip Transoport Detail Entry</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="{% url 'decoration_service_detail_entry' %}" class="btn btn-warning mt-3">Decoration detail Entry</a>
+                                <a href="{% url 'view_services' %}" class="btn btn-warning mt-3">View Existing Service</a>
+                                <a href="{% url 'management_dashboard' %}" class="btn btn-warning mt-3">Goto Management</a>
+
+                            </div>
+                        </div>
                     </div>
-    
-                    {% endfor %}
-                    <button type="submit" class="btn btn-primary" name="supply_data">Save</button>
                 </div>
-            </form>
+            </div>
+        </div>
+    </div>
     <!-- Footer -->
-    <footer class="text-center text-lg-start bg-light text-muted footercs ">
+    <footer class="text-center text-lg-start bg-light text-muted footercs">
         <!-- Section: Social media -->
         <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-            <!-- Left -->
-            <div class="me-5 d-none d-lg-block">
-                <span>Get connected with us on social networks:</span>
-            </div>
-            <!-- Left -->
-
-            <!-- Right -->
-            <div>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-google"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="" class="me-4 text-reset">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-            <!-- Right -->
+          <!-- Left -->
+          <div class="me-5 d-none d-lg-block">
+            <span>Get connected with us on social networks:</span>
+          </div>
+          <!-- Left -->
+    
+          <!-- Right -->
+          <div>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-google"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="" class="me-4 text-reset">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+          <!-- Right -->
         </section>
         <!-- Section: Social media -->
-
+    
         <!-- Section: Links  -->
         <section class="">
-            <div class="container text-center text-md-start mt-5">
-                <!-- Grid row -->
-                <div class="row mt-3">
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                        <!-- Content -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3"></i>Company name
-                        </h6>
-                        <p>
-                            Here you can use rows and columns to organize your footer content. Lorem ipsum
-                            dolor sit amet, consectetur adipisicing elit.
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Products
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-reset">Angular</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">React</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Vue</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Laravel</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Useful links
-                        </h6>
-                        <p>
-                            <a href="#!" class="text-reset">Pricing</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Settings</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Orders</a>
-                        </p>
-                        <p>
-                            <a href="#!" class="text-reset">Help</a>
-                        </p>
-                    </div>
-                    <!-- Grid column -->
-
-                    <!-- Grid column -->
-                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <!-- Links -->
-                        <h6 class="text-uppercase fw-bold mb-4">
-                            Contact
-                        </h6>
-                        <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-                        <p>
-                            <i class="fas fa-envelope me-3"></i>
-                            info@example.com
-                        </p>
-                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-                    </div>
-                    <!-- Grid column -->
-                </div>
-                <!-- Grid row -->
+          <div class="container text-center text-md-start mt-5">
+            <!-- Grid row -->
+            <div class="row mt-3">
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  <i class="fas fa-gem me-3"></i>bYv
+                </h6>
+                <p>
+                  If you’ve ever hit that moment sometimes a small lift up can send you back in the right direction.
+                  Sometimes the well-conceived words of history’s very best innovators, entrepreneurs, and leaders can be
+                  just the inspiration you need.
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Services
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">Ctering</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Photography</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Decoration</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Travel</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Useful links
+                </h6>
+                <p>
+                  <a href="#!" class="text-reset">Pricing</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Settings</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Orders</a>
+                </p>
+                <p>
+                  <a href="#!" class="text-reset">Help</a>
+                </p>
+              </div>
+              <!-- Grid column -->
+    
+              <!-- Grid column -->
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                  Contact
+                </h6>
+                <p><i class="fas fa-home me-3"></i> Assam.bYv Headquater</p>
+                <p>
+                  <i class="fas fa-envelope me-3"></i>
+                  bYv@gmail.com
+                </p>
+                <p><i class="fas fa-phone me-3"></i> 8876840790</p>
+                <p><i class="fas fa-print me-3"></i> 9101285134</p>
+              </div>
+              <!-- Grid column -->
             </div>
+            <!-- Grid row -->
+          </div>
         </section>
         <!-- Section: Links  -->
-
+    
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2021 Copyright:
-            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+          © 2021 :
+          <a class="text-reset fw-bold" href="https://mdbootstrap.com/">bYv.com</a>
         </div>
         <!-- Copyright -->
-    </footer>
+      </footer>
     <!-- Footer -->
 
 

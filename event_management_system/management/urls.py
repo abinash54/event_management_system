@@ -15,7 +15,7 @@ urlpatterns = [
 
     #manage venues
     path('view_venues/', views.venueDash, name='view_venues'),
-    path('view_venue_list/', views.venueList, name='view_venue_list')
+    path('view_venue_list/', views.venueList, name='view_venue_list'),
 
 
 ]

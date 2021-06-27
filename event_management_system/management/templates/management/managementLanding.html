@@ -13,7 +13,7 @@
 
     <title>Viewpage</title>
 
-
+</head>
 
 <body class="bx">
     <!-- NAV BAR WITH THE SLIDE************** -->
@@ -63,38 +63,27 @@
         </div>
     </div>
 
+    <div style="height:100px"></div>
+    <!--navigation pannel-->
+    <div class="container align-items-center">
+        <div class="card text-white bg-dark mb-3 align-items-center mx-auto" style="max-width: 600px;">
+            <div class="card-header">Navigation Panel (for demo only)</div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="{% url 'view_services' %}" class="btn btn-warning mt-3">View Services</a>
+                        <a href="{% url 'view_booked_events' %}" class="btn btn-warning mt-3">View Booked Events</a>
+                        <a href="{% url 'view_venues' %}" class="btn btn-warning mt-3">Enlisted Venues</a>
+                        <a href="{% url 'company_dashboard' 3 %}" class="btn btn-warning mt-3">Company Dashboard</a>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-primary" style="height:200px;width: 250px;"></button>
 
-
-    <!-- Customer Details-->
-    <div class="container my-5">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-            <div class="col-10 col-sm-8 col-lg-6">
-                <img src="img\addVenue\fi.jpg" class="d-block w-100" alt="venue" height="500">
-            </div>
-            <div class="col-lg-6">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-
-
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-warning btn-lg" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                        View booked events
-                    </button> 
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-warning btn-lg" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                        Manage Venues
-                    </button>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-warning btn-lg" data-bs-toggle="modal"
-                        data-bs-target="#exampleModal">
-                        View Companies
-                    </button>
+                    </div>
                 </div>
-            </div>                    
+            </div>
         </div>
     </div>
-
 
     <!-- Footer -->
     <footer class="text-center text-lg-start bg-light text-muted footercs">

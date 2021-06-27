@@ -67,31 +67,56 @@
     <!-- DISPLAY DETAILS-->
 
     <div class="container my-5">
-        <p class="text-center fw-bolder fs-1">Photography Details</p>
-        <hr>
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="text-center fw-bolder fs-1">Decoration Details</p>
+                <hr>
 
-        <form method="POST" class="my-5">
-            
-            {% csrf_token %}
-            <div class="row">
-                {% for field in form  %}
-                <div class="col-sm-2">
-                    <b>{{ field.label_tag }}</b>
-                    <div style="height: 30px;"></div>
-                </div>
-                <div class="col-sm-10">
-                    {{ field }}
-                    <div style="height: 30px;"></div>
-                </div>
+                <form method="POST" class="my-5">
+                    
+                    {% csrf_token %}
+                    <div class="row">
+                        {% for field in form  %}
+                        <div class="col-sm-2">
+                            <b>{{ field.label_tag }}</b>
+                            <div style="height: 30px;"></div>
+                        </div>
+                        <div class="col-sm-10">
+                            {{ field }}
+                            <div style="height: 30px;"></div>
+                        </div>
 
-                {% endfor %}
-                <button type="submit" class="btn btn-primary" name="supply_data">Save</button>
+                        {% endfor %}
+                        <button type="submit" class="btn btn-primary" name="supply_data">Save</button>
+                    </div>
+                    
+                    
+                </form>
+                
+
+                <hr>
             </div>
-            
-            
-        </form>
+            <div class="col-sm-6">
+                <div class="card text-white bg-dark mb-3" style="max-width: 600px;">
+                    <div class="card-header">Navigation Panel (for demo only)</div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <a href="{% url 'service_details_form' %}" class="btn btn-warning mt-3">Company Personal Detail Entry</a>
+                                <a href="{% url 'catering_details_entry' %}" class="btn btn-warning mt-3">Catering Detail Entry</a>
+                                <a href="{% url 'vipTransport_details_entry' %}" class="btn btn-warning mt-3">Vip Transoport Detail Entry</a>
+                            </div>
+                            <div class="col-6">
+                                <a href="{% url 'decoration_service_detail_entry' %}" class="btn btn-warning mt-3">Decoration detail Entry</a>
+                                <a href="{% url 'view_services' %}" class="btn btn-warning mt-3">View Existing Service</a>
+                                <a href="{% url 'management_dashboard' %}" class="btn btn-warning mt-3">Goto Management</a>
 
-        <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
