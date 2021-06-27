@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
 from django.template.context_processors import csrf
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.template import RequestContext
 from .forms import *
+from management.models import Service_Company
 
 # Create your views here.
 def detail_intake(request):
@@ -24,9 +25,22 @@ def detail_intake(request):
     return render(request, 'services/serviceDetailsForm.html', context)
 
 
+
+#company dashboard
+def dashboard(request, id):
+    try:
+        company = Service_Company.objects.get(id=id)
+    except Service_Company.DoesNotExist:
+        return HttpResponse('<h2>company removed</h2>')
+    
+        
+
+    context={'company':company}
+    return render(request, 'services/coDashboard.html', context)
+
+
+
 #service details entry
-
-
 def catEntry(request):
     form = CateringForm()
 

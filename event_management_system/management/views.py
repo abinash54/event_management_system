@@ -3,6 +3,10 @@ from .models import Service_Company, Event, Venue
 from .forms import *
 
 # Create your views here.
+def landing(request):
+    return render(request, 'management/managementLanding.html')
+
+
 def mang_index(request):
     services = Service_Company.objects.all()
     

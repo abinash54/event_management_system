@@ -10,9 +10,9 @@ major
 
 ]= venue CRUD management [done]
 
-]= company personal detail view
+]= company personal detail view--
 
-]= company service detail view
+]= company service detail view--merge them together
 
 ]= add all service type entry [done]
 
