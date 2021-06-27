@@ -35,7 +35,7 @@ steps:
       "python -m venv yourEnv" in cmd
       
     3. activate it by typing 
-      "yourEnv/bin/activate"
+      "yourEnv\Scripts\activate"
       
      4. Install the necessary packages
       "pip install -r requirements.txt"
